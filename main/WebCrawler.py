@@ -7,7 +7,8 @@ from main import FileUtil
 # constants
 encoding = "utf-8"
 headers = {
-    "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36"}
+    # "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36"}  # windows
+    "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36"}  # mac
 _page_interval = 1  # crawl page interval
 
 # static data
@@ -21,8 +22,7 @@ hz = "/c101210100-p100202/?ka=sel-city-101210100"
 city_url_array = [bj]
 
 
-def crawl_job_info_from_url_list(url_array, auto_crawl_next=True):
-    file_path = FileUtil.create_csv_file_path_by_time()
+def crawl_job_info_from_url_list(file_path, url_array, auto_crawl_next=True):
     with open(file_path, 'w+', encoding=encoding, newline="") as csv_file:
         writer = csv.writer(csv_file)
         for city in url_array:
@@ -62,6 +62,8 @@ def get_next_url_path(soup):
 def get_soup(path):
     req = request.Request(url=path, headers=headers)
     html = request.urlopen(req)
+    # mac 上面一行代码报错 请在terminal中执行下面一行命令（注意替换对应的Python版本号）reference -> https://github.com/tensorflow/tensorflow/issues/10779
+    # /Applications/Python\ 3.7/Install\ Certificates.command
     soup = BeautifulSoup(html.read(), features="html.parser")
     return soup
 

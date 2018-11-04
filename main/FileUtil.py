@@ -3,11 +3,11 @@ import time
 import os
 
 
-def create_csv_file_path_by_time():
+def create_csv_file_path_by_time(suffix):
     dir_path = get_up_level_dir_path(__file__) + "/data"
     if not os.path.exists(dir_path):
         os.mkdir(dir_path)
-    file_path = dir_path + "/%s_job.csv" % time.strftime("%Y%m%d_%H%M", time.localtime())
+    file_path = dir_path + "/%s_job_info_%s.csv" % (time.strftime("%Y%m%d_%H%M", time.localtime()), suffix)
     return file_path
 
 
