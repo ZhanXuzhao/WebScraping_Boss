@@ -3,6 +3,7 @@ import time
 from urllib import request
 from bs4 import BeautifulSoup
 from main import FileUtil
+import time
 
 # constants
 encoding = "utf-8"
@@ -22,12 +23,16 @@ hz = "/c101210100-p100202/?ka=sel-city-101210100"
 city_url_array = [bj]
 
 
-def crawl_job_info_from_url_list(file_path, url_array, auto_crawl_next=True):
+def crawl_job_info_from_url_list(file_suffix, url_array, auto_crawl_next=True):
+    file_path = FileUtil.create_csv_file_path_by_time(file_suffix)
+    start_time = time.time()
     with open(file_path, 'w+', encoding=encoding, newline="") as csv_file:
         writer = csv.writer(csv_file)
         for city in url_array:
             crawl_job_info_from_url(city, writer, auto_crawl_next)
-    print("crawl_job_info_from_url_list finish")
+    end_time = time.time()
+    cost_time = end_time - start_time
+    print("job done, time cost(s): %f" % cost_time)
 
 
 def crawl_job_info_from_url(url_path, writer, auto_crawl_next=True):
@@ -98,7 +103,7 @@ def write_job_info(writer, soup):
 
         # combine to one row
         row = [location, title, ave_salary, work_exp, education] + company_info_arr2
-        print(row)
+        # print(row)
         writer.writerow(row)
 
 

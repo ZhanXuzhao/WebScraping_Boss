@@ -2,6 +2,7 @@ import csv
 import os
 import matplotlib.pyplot as plt
 import numpy as np
+import re
 
 from main import FileUtil
 
@@ -21,26 +22,13 @@ def resolve_chinese_problem():
 resolve_chinese_problem()
 
 
-def analyze_csv(file_path, index, value):
+def get_ave_salary_and_count(file_path, index, value, fuzzy=True):
     with open(file_path, encoding="utf-8") as file:
         reader = csv.reader(file)
         salary_sum = 0
         count = 0
         for row in reader:
-            if row[index] == value:
-                salary_sum += float(row[2])
-                count += 1
-        ave_salary = salary_sum / count
-        return ave_salary
-
-
-def get_ave_salary_and_count(file_path, index, value):
-    with open(file_path, encoding="utf-8") as file:
-        reader = csv.reader(file)
-        salary_sum = 0
-        count = 0
-        for row in reader:
-            if row[index] == value:
+            if fuzzy_match(value, row[index], fuzzy):
                 salary_sum += float(row[2])
                 count += 1
         if count == 0:
@@ -62,14 +50,14 @@ def show_average_salary_by_custom_dimension(file_path, dimension_desc):
         count_list.append(ave_salary_and_count[1])
 
     # draw_pie(title, labels, count_list)
-    # draw_bar(title, 'Average salary (k)', labels, ave_salary_list)
-    # draw_line(title, 'Average salary (k)', labels, count_list)
-
-    draw_bar_and_line(title, labels, ave_salary_list, count_list)
+    print(ave_salary_list, count_list)
+    draw_bar(title, 'Average salary (k)', labels, ave_salary_list)
+    # draw_line(title, 'Job counts', labels, count_list)
+    # draw_bar_and_line(title, labels, ave_salary_list, count_list)
 
 
 def draw_bar_and_line(title, labels, bar_values, line_values):
-    fig, axs = plt.subplots(1, 2, figsize=(16, 6))
+    fig, axs = plt.subplots(1, 2, figsize=(8, 4))
     fig.suptitle(title)
     axs[0].bar(labels, bar_values)
     axs[1].plot(labels, line_values)
@@ -107,19 +95,45 @@ def draw_line(title, y_label, labels, values):
     plt.show()
 
 
-def get_file_path():
-    global last_file_path
+def get_file_path(file_index):
+    global file_path
     data_dir_path = FileUtil.get_up_level_dir_path(__file__) + "/data"
-    listdir = os.listdir(data_dir_path)
-    last_file_name = listdir[-1]
-    last_file_path = data_dir_path + "/" + last_file_name
-    print(last_file_path)
-    return last_file_path
+    listdir = sorted(os.listdir(data_dir_path))
+    print(listdir)
+    file_name = listdir[file_index]
+    file_path = data_dir_path + "/" + file_name
+    print(file_path)
+    return file_path
+
+
+def fuzzy_match(pattern, string, fuzzy):
+    print(pattern, string)
+    pattern = pattern.replace("+","\+")
+    if pattern == "H5":
+        pattern = "H.*5"
+    if fuzzy:
+        if re.search(pattern, string, re.IGNORECASE):
+            value = True
+        else:
+            value = False
+    else:
+        value = pattern == string
+    return value
 
 
 # 北京,Android,22.5,3-5年,本科,互联网,B轮,100-499人,北京雷石
-dimension_city = ["城市", 0, ["北京", "上海", "广州", "深圳", "杭州"]]
-dimension_experience = ["工作经验", 3, ["不限", "应届生", "1年以内", "1-3年", "3-5年", "5-10年", "10年以上"]]
+dimension_city = ["Android平均月薪 vs 地区", 0, ["北京", "上海", "广州", "深圳", "杭州"]]
+dimension_work_experience = ["Android平均月薪 vs 工作年限（北京）", 3, ["应届生", "1年以内", "1-3年", "3-5年", "5-10年", "10年以上"]]
+dimension_education_experience = ["Android平均月薪 vs 学历", 4, ["大专", "本科", "硕士", "博士"]]
+dimension_financing_state = ["Android平均月薪 vs 融资阶段", 6, ["未融资", "天使轮", "A轮", "B轮", "C轮", "D轮及以上", "已上市", "不需要融资"]]
+dimension_company_size = ["Android平均月薪 vs 公司规模", 7,
+                          ["0-20人", "20-99人", "100-499人", "500-999人", "1000-9999人", "10000人以上"]]
+dimension_job = ["不同技术岗位 平均月薪", 1, ["Java", "PHP", "C++", "C#", "Python", "H5", "Android", "iOS", "Web前端"]]
 
 if __name__ == '__main__':
-    show_average_salary_by_custom_dimension(get_file_path(), dimension_experience)
+    # show_average_salary_by_custom_dimension(get_file_path(0), dimension_city)
+    # show_average_salary_by_custom_dimension(get_file_path(1), dimension_work_experience)
+    # show_average_salary_by_custom_dimension(get_file_path(2), dimension_education_experience)
+    # show_average_salary_by_custom_dimension(get_file_path(3), dimension_financing_state)
+    # show_average_salary_by_custom_dimension(get_file_path(4), dimension_company_size)
+    show_average_salary_by_custom_dimension(get_file_path(5), dimension_job)

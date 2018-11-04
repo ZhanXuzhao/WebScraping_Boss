@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e95f2c9c-1c38-487a-9f4b-e31f20441fb1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/day_1103_boss_jobs.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/day_1103_boss_jobs.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+    <list default="true" id="e95f2c9c-1c38-487a-9f4b-e31f20441fb1" name="Default Changelist" comment="修复 mac 系统 openurl 报错的bug&#10;urllib.error.URLError: &lt;urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate in certificate chain (_ssl.c:1051)&gt;">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/20181103_1537_job.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/20181103_1537_job_info_different_cities.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/20181103_1537_job_5cities.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/20181104_2107_job_info_in_different_cities.csv" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/main/AnalysisUtil.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/AnalysisUtil.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/Main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/Main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/WebCrawler.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/WebCrawler.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/test.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -66,26 +67,30 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="gitignore" value="11" />
-          <entry key="py" value="56" />
+          <entry key="csv" value="1" />
+          <entry key="dummy" value="9" />
+          <entry key="gitignore" value="22" />
+          <entry key="py" value="2166" />
+          <entry key="txt" value="33" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="11" />
-          <entry key="Python" value="56" />
+          <entry key="PLAIN_TEXT" value="65" />
+          <entry key="Python" value="2166" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
+          <entry key="csv" value="15" />
           <entry key="gitignore" value="1" />
-          <entry key="py" value="9" />
+          <entry key="py" value="17" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="PLAIN_TEXT" value="1" />
-          <entry key="Python" value="9" />
+          <entry key="PLAIN_TEXT" value="16" />
+          <entry key="Python" value="17" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages" />
@@ -94,10 +99,54 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/main/Main.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="320">
+              <caret line="56" column="75" lean-forward="true" selection-start-line="56" selection-start-column="75" selection-end-line="56" selection-end-column="75" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/main/AnalysisUtil.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="176">
+              <caret line="56" lean-forward="true" selection-start-line="56" selection-end-line="56" />
+              <folding>
+                <element signature="e#0#10#0" expanded="true" />
+                <marker date="1541350628476" expanded="true" signature="3097:3280" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/data/20181105_0027_job_info_different_job_in_beijing.csv">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-11138">
+              <caret line="507" column="9" selection-start-line="507" selection-start-column="7" selection-end-line="507" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/main/WebCrawler.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="243">
+              <caret line="25" column="26" lean-forward="true" selection-start-line="25" selection-start-column="26" selection-end-line="25" selection-end-column="26" />
+              <folding>
+                <element signature="e#0#10#0" expanded="true" />
+                <marker date="1541345922262" expanded="true" signature="4070:4071" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main/FileUtil.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" selection-start-line="1" selection-end-line="1" />
+            <state relative-caret-position="180">
+              <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
               <folding>
                 <element signature="e#25#36#0" expanded="true" />
               </folding>
@@ -106,33 +155,26 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/main/AnalysisUtil.py">
+        <entry file="file://$PROJECT_DIR$/test/test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="24" column="51" lean-forward="true" selection-start-line="24" selection-start-column="51" selection-end-line="24" selection-end-column="51" />
-              <folding>
-                <element signature="e#0#10#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="5" selection-start-column="5" selection-end-column="5" />
+            <state relative-caret-position="30">
+              <caret line="2" column="18" lean-forward="true" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="18" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file:///Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/matplotlib/font_manager.py">
+        <entry file="file:///Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/re.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="18030">
-              <caret line="1208" lean-forward="true" selection-start-line="1208" selection-end-line="1208" />
+            <state relative-caret-position="151">
+              <caret line="179" selection-start-line="179" selection-end-line="179" />
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/data/20181104_2216_job_info_different_work_experience_in_beijing.csv">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -148,11 +190,18 @@
     <findStrings>
       <find>&quot;title&quot;</find>
       <find>values</find>
+      <find>FileUtil.create_csv_file_path_by_time(</find>
+      <find>https://www.zhipin.com</find>
+      <find>android</find>
+      <find>dimension</find>
+      <find>fuzz</find>
+      <find>c#</find>
     </findStrings>
     <replaceStrings>
       <replace>title</replace>
       <replace>labels</replace>
       <replace>ave_salary_list</replace>
+      <replace>bj</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -169,13 +218,14 @@
         <option value="$PROJECT_DIR$/main/util.py" />
         <option value="$PROJECT_DIR$/main/boss_crawler.py" />
         <option value="$PROJECT_DIR$/main/web_crawler.py" />
-        <option value="$PROJECT_DIR$/main/FileUtil.py" />
-        <option value="$PROJECT_DIR$/main/Main.py" />
-        <option value="$PROJECT_DIR$/main/WebCrawler.py" />
-        <option value="$PROJECT_DIR$/test/test.py" />
-        <option value="$PROJECT_DIR$/main/AnalysisUtil.py" />
         <option value="$PROJECT_DIR$/main/ChineseUtil.py" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/main/FileUtil.py" />
+        <option value="$PROJECT_DIR$/data/20181104_2207_job_info_different_work_experience_in_beijing.csv" />
+        <option value="$PROJECT_DIR$/main/WebCrawler.py" />
+        <option value="$PROJECT_DIR$/main/Main.py" />
+        <option value="$PROJECT_DIR$/test/test.py" />
+        <option value="$PROJECT_DIR$/main/AnalysisUtil.py" />
       </list>
     </option>
   </component>
@@ -204,6 +254,16 @@
             <path>
               <item name="WebScraping_Boss" type="b2602c69:ProjectViewProjectNode" />
               <item name="WebScraping_Boss" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="WebScraping_Boss" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WebScraping_Boss" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="WebScraping_Boss" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WebScraping_Boss" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -226,15 +286,7 @@
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
               <item name="&lt; Python 3.7 &gt;" type="70bed36:NamedLibraryElementNode" />
               <item name="python3.7" type="462c0819:PsiDirectoryNode" />
-              <item name="site-packages" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="WebScraping_Boss" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; Python 3.7 &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="python3.7" type="462c0819:PsiDirectoryNode" />
-              <item name="site-packages" type="462c0819:PsiDirectoryNode" />
-              <item name="matplotlib" type="462c0819:PsiDirectoryNode" />
+              <item name="urllib" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -293,14 +345,14 @@
       <method v="2" />
     </configuration>
     <configuration name="Main" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="day_1103_boss_jobs" />
+      <module name="WebScraping_Boss" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="D:/Dev/Python/Python37-32/Scripts" />
+      <option name="WORKING_DIRECTORY" value="" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
@@ -425,6 +477,14 @@
       <option name="presentableId" value="Default" />
       <updated>1541219473217</updated>
     </task>
+    <task id="LOCAL-00001" summary="修复 mac 系统 openurl 报错的bug&#10;urllib.error.URLError: &lt;urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate in certificate chain (_ssl.c:1051)&gt;">
+      <created>1541337149812</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1541337149813</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TodoView">
@@ -440,39 +500,39 @@
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19288728" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4986339" visible="true" weight="0.32007232" />
+      <window_info id="Structure" order="1" sideWeight="0.50136614" side_tool="true" weight="0.32007232" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32935324" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.18469387" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3283582" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.38061225" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.327551" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.32935324" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32857144" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.3632653" />
-      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Python Console" order="10" weight="0.32935324" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.34285715" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50030136" side_tool="true" weight="0.32857144" />
+      <window_info anchor="bottom" id="Python Console" order="10" sideWeight="0.4996986" weight="0.32857144" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
     <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3904245" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4986339" visible="true" weight="0.32007232" />
+      <window_info id="Structure" order="1" sideWeight="0.50136614" side_tool="true" visible="true" weight="0.32007232" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32935324" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.4079602" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.25306123" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3283582" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.32935324" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32857144" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32935324" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.34285715" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Python Console" order="10" weight="0.32935324" />
+      <window_info anchor="bottom" id="Python Console" order="10" weight="0.32857144" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -481,8 +541,27 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="修复 mac 系统 openurl 报错的bug&#10;urllib.error.URLError: &lt;urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate in certificate chain (_ssl.c:1051)&gt;" />
+    <option name="LAST_COMMIT_MESSAGE" value="修复 mac 系统 openurl 报错的bug&#10;urllib.error.URLError: &lt;urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate in certificate chain (_ssl.c:1051)&gt;" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/main/AnalysisUtil.py</url>
+          <line>55</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/main/AnalysisUtil.py</url>
+          <line>37</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+      <breakpoints-dialog>
+        <breakpoints-dialog />
+      </breakpoints-dialog>
       <default-breakpoints>
         <breakpoint type="python-exception">
           <properties notifyOnTerminate="true" exception="BaseException">
@@ -509,49 +588,6 @@
     <entry file="file://$PROJECT_DIR$/data/20181103_1515_job.csv" />
     <entry file="file://D:/Dev/Python/Python37-32/Lib/datetime.py" />
     <entry file="file://$PROJECT_DIR$/data/20181103_1415_job.csv" />
-    <entry file="file://$PROJECT_DIR$/data/20181103_1537_job.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-27619" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/20181103_1537_job_5cities.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="19" selection-start-line="19" selection-end-line="19" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="30" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main/Main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="55" selection-start-line="9" selection-start-column="55" selection-end-line="9" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main/WebCrawler.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="8" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main/FileUtil.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-          <folding>
-            <element signature="e#25#36#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/matplotlib/font_manager.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="18030">
@@ -566,20 +602,142 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main/AnalysisUtil.py">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="51" lean-forward="true" selection-start-line="24" selection-start-column="51" selection-end-line="24" selection-end-column="51" />
+        <state relative-caret-position="15">
+          <caret line="1" column="9" selection-start-line="1" selection-start-column="9" selection-end-line="1" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/urllib/request.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="70">
+          <caret line="1318" selection-start-line="1318" selection-end-line="1318" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/20181104_2107_job_info_in_different_cities.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/20181104_2149_job_info_different_work_experience_in_beijing.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/20181104_2156_job_info_different_work_experience_in_beijing.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2398" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/20181104_2158_job_info_different_work_experience_in_beijing.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-20398" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/20181104_2201_job_info_different_work_experience_in_beijing.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2338" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/20181104_2150_job_info_different_work_experience_in_beijing.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-20398" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/20181103_1537_job.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="28" column="40" lean-forward="true" selection-start-line="28" selection-start-column="40" selection-end-line="28" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/20181104_2207_job_info_different_work_experience_in_beijing.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3481" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/20181103_1537_job_info_different_cities.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4948">
+          <caret line="18" column="24" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/20181104_2234_job_info_different_education_experience_in_beijing.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="519" column="29" selection-start-line="519" selection-start-column="27" selection-end-line="519" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/FileUtil.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
           <folding>
-            <element signature="e#0#10#0" expanded="true" />
+            <element signature="e#25#36#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
+    <entry file="file://$PROJECT_DIR$/main/WebCrawler.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="5" selection-start-column="5" selection-end-column="5" />
+        <state relative-caret-position="243">
+          <caret line="25" column="26" lean-forward="true" selection-start-line="25" selection-start-column="26" selection-end-line="25" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+            <marker date="1541345922262" expanded="true" signature="4070:4071" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/20181104_2216_job_info_different_work_experience_in_beijing.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/re.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="151">
+          <caret line="179" selection-start-line="179" selection-end-line="179" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/20181105_0026_job_info_different_job_in_beijing.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/Main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="56" column="75" lean-forward="true" selection-start-line="56" selection-start-column="75" selection-end-line="56" selection-end-column="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/20181105_0005_job_info_different_job_in_beijing.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="8685">
+          <caret line="579" column="8" selection-start-line="579" selection-start-column="8" selection-end-line="579" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="18" lean-forward="true" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/20181105_0027_job_info_different_job_in_beijing.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-11138">
+          <caret line="507" column="9" selection-start-line="507" selection-start-column="7" selection-end-line="507" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/AnalysisUtil.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="56" lean-forward="true" selection-start-line="56" selection-end-line="56" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+            <marker date="1541350628476" expanded="true" signature="3097:3280" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
