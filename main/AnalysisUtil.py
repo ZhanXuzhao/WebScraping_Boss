@@ -5,7 +5,20 @@ import numpy as np
 
 from main import FileUtil
 
-plt.rc('font', family='SimHei', size=12)  # 显示中文
+
+def resolve_chinese_problem():
+    # 中文乱码处理
+    # https://www.zhihu.com/question/25404709
+    from matplotlib.font_manager import _rebuild
+    _rebuild()  # reload一下
+    # 指定默认字体
+    plt.rcParams['font.sans-serif'] = ['SimHei']
+    plt.rcParams['font.family'] = 'sans-serif'
+    # 用来正常显示负号
+    plt.rcParams['axes.unicode_minus'] = False
+
+
+resolve_chinese_problem()
 
 
 def analyze_csv(file_path, index, value):
@@ -52,7 +65,7 @@ def show_average_salary_by_custom_dimension(file_path, dimension_desc):
     # draw_bar(title, 'Average salary (k)', labels, ave_salary_list)
     # draw_line(title, 'Average salary (k)', labels, count_list)
 
-    # draw_bar_and_line(title, labels, ave_salary_list, count_list)
+    draw_bar_and_line(title, labels, ave_salary_list, count_list)
 
 
 def draw_bar_and_line(title, labels, bar_values, line_values):
